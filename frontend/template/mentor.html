@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Mentor</title>
+    <link rel="stylesheet" href="/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="logo">
+                    <img src="/images/logo.png" alt="Shelevate Logo">
+                    <span>Shelevate</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="/leaderboard">Leaderboard</a>
+                    <a href="/sponsors">Sponsors</a>
+                    <a href="/mentors">Mentors</a>
+                    <a href="/athletes">Athletes</a>
+                </div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="user-info">
+                            <p id="userName">User Name</p>
+                            <p id="userEmail">user@example.com</p>
+                        </div>
+                        <button class="logout-btn" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h1>Find Your Perfect Mentor</h1>
+            <p>Connect with experienced mentors who can help you achieve your athletic goals</p>
+        </section>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-search"></i>
+                <h3>Search Mentors</h3>
+                <select class="filter-select" id="sportSelect">
+                    <option value="">Select Sport</option>
+                    <option value="cricket">Cricket</option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                </select>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Select Region</h3>
+                <select class="filter-select" id="regionSelect">
+                    <option value="">Select Region</option>
+                    <option value="north">Mumbai</option>
+                    <option value="south">Bangalore</option>
+                    <option value="east">Delhi</option>
+                </select>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-running"></i>
+                <h3>Choose Position</h3>
+                <select class="filter-select" id="positionSelect">
+                    <option value="">Select Position</option>
+                    <option value="batter">Batter</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="all-rounder">All-Rounder</option>
+                    <option value="wicketkeeper">Wicketkeeper</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="search-btn" id="searchMentors">
+            <i class="fas fa-search"></i> Find Mentors
+        </button>
+
+        <section class="achievements-section">
+            <h2>Available Mentors</h2>
+            <div class="achievements-grid" id="mentorsGrid">
+                <!-- Mentors will be populated here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="/mentorship.js"></script>
+</body>
+</html>

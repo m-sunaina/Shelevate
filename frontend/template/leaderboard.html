@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/leaderboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Shelevate Logo">
+            <span>Shelevate</span>
+        </div>
+        <div class="nav-links">
+            <a href="/leaderboard">Leaderboard</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/mentors">Mentors</a>
+            <div class="profile-dropdown">
+                <button class="profile-btn">Profile <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="user-info">
+                        <p><strong>Name:</strong> <span id="userName"></span></p>
+                        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+                        <p><strong>Role:</strong> <span id="userRole"></span></p>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="categories-container" class="blocks-container">
+        </div>
+
+        <div id="players-modal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-category-title"></h2>
+                <div id="players-list"></div>
+            </div>
+        </div>
+
+        <div id="stats-modal" class="modal">
+            <div class="modal-content glass">
+                <span class="back-button">← Back</span>
+                <span class="close-button">&times;</span>
+                <h2 id="player-stats-title"></h2>
+                <div id="player-stats-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/leaderboard.js"></script>
+</body>
+</html>
